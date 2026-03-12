@@ -10,6 +10,6 @@ Simple program to list DLLs attached to the program or a remote one, to be used 
   `g++ main.cpp ressource.o -o main.exe`
 3. `Usage: main self|remote`
 ### TODO
-- EnumProcessModules (PSAPI) flagged as malicious, to evade => not required
-- OpenProcess with PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, to evade => not required
-[x] Add ressources : icon, infos and description
+- [ ] EnumProcessModules (PSAPI) flagged as malicious, to evade => not required
+- [ ] OpenProcess with PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, to evade => not required
+- [x] Add ressources : icon, infos and description
