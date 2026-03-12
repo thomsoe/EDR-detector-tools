@@ -15,11 +15,11 @@ void ListModules(HANDLE hProcess, DWORD processID){
         std::cout << "[+] " << count << " modules found in the PID " << processID << ":" << std::endl;
 
         for (int i = 0; i < count; i++) {
-            TCHAR moduleName[MAX_PATH];
+            char moduleName[MAX_PATH];
 
             // 3. Obtenir le chemin de chaque DLL
-            if (GetModuleFileNameEx(hProcess, tabModules[i], moduleName, sizeof(moduleName) / sizeof(TCHAR))) {
-		printf("  [%u] %s (Base address: %p)\n", i, moduleName, tabModules[i]);
+            if (GetModuleFileNameExA(hProcess, tabModules[i], moduleName, MAXPATH)) {
+			printf("  [%u] %s (Base address: %p)\n", i, moduleName, tabModules[i]);
             }
         }
     } else {
@@ -67,4 +67,5 @@ int main(int argc, char* argv[]) {
     }
 
     return 0;
+
 }
