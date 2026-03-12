@@ -18,7 +18,7 @@ void ListModules(HANDLE hProcess, DWORD processID){
             char moduleName[MAX_PATH];
 
             // 3. Obtenir le chemin de chaque DLL
-            if (GetModuleFileNameExA(hProcess, tabModules[i], moduleName, MAXPATH)) {
+            if (GetModuleFileNameExA(hProcess, tabModules[i], moduleName, MAX_PATH)) {
 			printf("  [%u] %s (Base address: %p)\n", i, moduleName, tabModules[i]);
             }
         }
@@ -69,3 +69,4 @@ int main(int argc, char* argv[]) {
     return 0;
 
 }
+
