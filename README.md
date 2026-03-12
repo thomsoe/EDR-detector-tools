@@ -1,6 +1,7 @@
-# Attached DLLs Identifier
+# EDRs detection tools
+A collection of tools to detect EDRs functionalities
 
+## Attached DLLs Identifier
 Simple program to list DLLs attached to the program or a remote one, to be used to identify AV/EDR hooker DLLs.
-
 1. Compile with `g++ main.cpp -o main.exe`
 2. `Usage: main self|remote`
