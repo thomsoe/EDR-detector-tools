@@ -7,7 +7,7 @@ Simple program to list DLLs attached to the program or a remote one, to be used 
 2. Convert the file to object file :\
   `windres ressource.rc -O coff -o ressource.o`
 3. Compile the program with :\
-  `g++ main.cpp ressource.o -o main.exe`
+  `g++ main.cpp ressource.o -o main.exe -Os`
 3. `Usage: main self|remote`
 ### TODO
 - [ ] EnumProcessModules (PSAPI) flagged as malicious, to evade => not required
