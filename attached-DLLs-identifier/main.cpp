@@ -19,7 +19,7 @@ void ListModules(HANDLE hProcess, DWORD processID){
 
             // 3. Obtenir le chemin de chaque DLL
             if (GetModuleFileNameEx(hProcess, tabModules[i], moduleName, sizeof(moduleName) / sizeof(TCHAR))) {
-		    printf("  [%u] %s (Base address: %p)\n", i, moduleName, tabModules[i]);
+		printf("  [%u] %s (Base address: %p)\n", i, moduleName, tabModules[i]);
             }
         }
     } else {
@@ -63,7 +63,7 @@ int main(int argc, char* argv[]) {
         DWORD pid; 
         printf("[?] Type the remote pid : "); // Type a number and press enter
         std::cin >> pid; // Get user input from the keyboard
-	    ListRemoteModules(pid);
+	ListRemoteModules(pid);
     }
 
     return 0;
